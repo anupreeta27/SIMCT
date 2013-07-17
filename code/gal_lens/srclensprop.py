@@ -202,16 +202,7 @@ def getreinst(zlens,zsrc,sigma):
 def init_crosssect():
   global cross_sect_spl,init_cs_spl;
   print "Initializing Cross-section"
-  ## Use the fiducial b_I, crosssect requires me to pass bsis.
-  if(0):
-      qi=np.arange(0.1,1.0,0.001);
-      csecti=qi*0.0;
-      for ii in range(qi.size):
-	print qi[ii];
-	csecti[ii]=getcrosssect(fid_b_I/sqrt(qi[ii]),qi[ii]);
-      np.savetxt("Crosssect.dat",np.transpose([qi,csecti]));
-  else:
-      qi,csecti=np.loadtxt("Crosssect.dat",unpack=1);
+  qi,csecti=np.loadtxt("Crosssect.dat",unpack=1);
   cross_sect_spl=interp1d(qi,csecti,kind='cubic');
   init_cs_spl=1;
 
