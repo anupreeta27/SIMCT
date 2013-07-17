@@ -5,6 +5,10 @@
 ## All tasks are divided over Nproc no. of processors, change Nproc in .py files
 ## here based on the no. of processors available your machine
 
+## Create "Crosssect.dat", if it does not exist
+###########################################################
+ ./mkcrosssect.py 
+
 ## Use foreground galaxy catalogs to extract those galaxies which will act as
 ## lenses and generate corresponding background (bkg) galaxy or quasar properties
 ## Also, uses Crosssect.dat and Cosmology.dat

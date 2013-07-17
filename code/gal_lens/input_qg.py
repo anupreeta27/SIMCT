@@ -6,7 +6,7 @@ from math import *
 
 ## Setting up Cosmology
 ##################
-## Add the full path to aum_mini below
+## Add the full path to aum_mini and the configfile below
 ff=open("/disk2/anupreeta/simcode/aum_mini/configfile");
 for line in ff:
     linecont=line.strip("\n")[1:];
@@ -31,10 +31,10 @@ cc=c.cosmology(p);
 ## Some standard paths and constants
 ##################
 ## Input foreground and background catalogs
-lenscatalog='../catalogs/test_gal.txt'
-##lenscatalog='../catalogs/inp_gal_frg_cat_w2.txt'
-bkgqsocatalog="../catalogs/inp_qso_bkg_cat.txt"
-bkggalcatalog="../catalogs/inp_gal_bkg_cat.txt"
+lenscatalog='../../catalogs/test_gal.txt'
+##lenscatalog='../../catalogs/inp_gal_frg_cat_w2.txt'
+bkgqsocatalog="../../catalogs/inp_qso_bkg_cat.txt"
+bkggalcatalog="../../catalogs/inp_gal_bkg_cat.txt"
 
 ## Path to keeton's lensmodel executable
 lenscode="/home/anupreeta/soft/lensmodel"

@@ -5,26 +5,30 @@
 ## All tasks are divided over Nproc no. of processors, change Nproc in .py files
 ## here based on the no. of processors available your machine
 
+## Create "FileFor_Kappa_s_R_s.dat", if it does not exist
+###########################################################
+ ./mkkappa.py > /dev/null 2>&1 
+
 ## Use cluster catalogs to extract those clusters which will act as
 ## lenses and generate corresponding background (bkg) galaxy properties
 ## Also, uses Cosmology.dat
 ###########################################################
-#rm GAL*.txt LOG*.txt mck1/*
-#./main.py
+ rm GAL*.txt LOG*.txt mck1/*
+ ./main.py
 
 ## Nproc no. of output files are created.
 ## Create a single catalog for bkg galaxies per each lens and create a single
 ## catalog with info on BCG+members   
 ###########################################################
-#cat GAL*txt > all_gal.txt
-#cat LEN*txt > lenscat.txt
+ cat GAL*txt > all_gal.txt
+ cat LEN*txt > lenscat.txt
 
 ## Create directories for intermediate outputs
 ###########################################################
-#mkdir galt mck1 mckg 
+ mkdir galt mck1 mckg 
 
-#mv G*txt L*txt galt/
-#cp all_gal.txt lenscat.txt galt/
+ mv G*txt L*txt galt/
+ cp all_gal.txt lenscat.txt galt/
   
 ## Generate an extended lens catalog with all parameters necessary for
 ## generating simulated lensed images 

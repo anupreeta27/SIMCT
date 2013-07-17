@@ -44,6 +44,7 @@ from input_qg import *
 ###########################################################
 
 ## Constants
+##Do not change the value of fid_b_I
 fid_b_I=10.0;
 init_cs_spl=0;
 cross_sect_spl=0;
