@@ -1,3 +1,4 @@
 
-This code generates simulated lens images for the CFHTLS and are used in Space
+This code generates simulated gravitational lens images using the CFHTLS
+catalogs and data. These simulated images are used for the Space
 Warps project.
